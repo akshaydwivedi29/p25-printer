@@ -36,31 +36,30 @@
                 </feature>
             </config-file>
 
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/MainActivity.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/InputTextDialog.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/P25ConnectionException.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/P25Connector.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/MainActivity.java" target-dir="src/net/londatiga/android/bluebamboo/MainActivity.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/InputTextDialog.java" target-dir="src/net/londatiga/android/bluebamboo/InputTextDialog.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/P25ConnectionException.java" target-dir="src/net/londatiga/android/bluebamboo/P25ConnectionException.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/P25Connector.java" target-dir="src/net/londatiga/android/bluebamboo/P25Connector.java" />
             
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/Function.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PocketPos.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PostDefine.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PostMessage.java" />
-             <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/SmartPost.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/Function.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/Function.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/PocketPos.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PocketPos.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/PostDefine.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PostDefine.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/PostMessage.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PostMessage.java" />
+             <source-file src="src/android/net/londatiga/android/bluebamboo/SmartPost.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/SmartPost.java" />
             
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/SmartPost.java" />
 
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/AppParameters.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/ByteConvert.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/DataConstants.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/DataModel.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/DateUtil.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/FileOperation.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/FontDefine.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/NumberUtil.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/Printer.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/StringUtil.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/Tracer.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/WhitelistPlugin.java" target-dir="src/net/londatiga/android/bluebamboo/util/Util.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/AppParameters.java" target-dir="src/net/londatiga/android/bluebamboo/util/AppParameters.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/ByteConvert.java" target-dir="src/net/londatiga/android/bluebamboo/util/ByteConvert.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/DataConstants.java" target-dir="src/net/londatiga/android/bluebamboo/util/DataConstants.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/DataModel.java" target-dir="src/net/londatiga/android/bluebamboo/util/DataModel.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/DateUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/DateUtil.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/FileOperation.java" target-dir="src/net/londatiga/android/bluebamboo/util/FileOperation.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/FontDefine.java" target-dir="src/net/londatiga/android/bluebamboo/util/FontDefine.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/NumberUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/NumberUtil.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/Printer.java" target-dir="src/net/londatiga/android/bluebamboo/util/Printer.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/StringUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/StringUtil.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/Tracer.java" target-dir="src/net/londatiga/android/bluebamboo/util/Tracer.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/Util.java" target-dir="src/net/londatiga/android/bluebamboo/util/Util.java" />
             
             <js-module src="whitelist.js" name="whitelist">
                 <runs />
