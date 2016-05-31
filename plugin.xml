@@ -61,7 +61,7 @@
             <source-file src="src/android/net/londatiga/android/bluebamboo/Tracer.java" target-dir="src/net/londatiga/android/bluebamboo/util/Tracer.java" />
             <source-file src="src/android/net/londatiga/android/bluebamboo/Util.java" target-dir="src/net/londatiga/android/bluebamboo/util/Util.java" />
             
-            <js-module src="whitelist.js" name="whitelist">
+            <js-module src="p25printer.js" name="p25printer">
                 <runs />
             </js-module>
             <info>
