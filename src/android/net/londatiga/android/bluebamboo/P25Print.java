@@ -344,22 +344,22 @@ public class P25Print extends CordovaPlugin  {
 	        	final int state 	= intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
 	        	
 	        	if (state == BluetoothAdapter.STATE_ON) {
-	        		showEnabled();
+	        	//	showEnabled();
 	        	} else if (state == BluetoothAdapter.STATE_OFF) {
-		        	showDisabled();
+		        //	showDisabled();
 	        	}
 	        } else if (BluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(action)) {
-	        	mDeviceList = new ArrayList<BluetoothDevice>();
+	        	//mDeviceList = new ArrayList<BluetoothDevice>();
 				
 				mProgressDlg.show();
 	        } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
-	        	mProgressDlg.dismiss();
+	        	//mProgressDlg.dismiss();
 	        	
 	        	updateDeviceList();
 	        } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
 	        	BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 		        
-	        	mDeviceList.add(device);
+	        	//mDeviceList.add(device);
 	        	
 	        	showToast("Found device " + device.getName());
 	        } else if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
