@@ -192,9 +192,9 @@ public class P25Print extends CordovaPlugin  {
 
 	}
 	
-	public void connect(CordovaArgs args) {
+	public void connect(String macAddr) {
 		
-        String macAddress = args.getString(0);
+        String macAddress = macAddr;
 		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(macAddress);;
 		
 		if (device.getBondState() == BluetoothDevice.BOND_NONE) {
