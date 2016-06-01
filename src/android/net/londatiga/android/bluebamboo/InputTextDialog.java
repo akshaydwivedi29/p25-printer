@@ -20,6 +20,7 @@ import android.widget.EditText;
  *
  */
 public class InputTextDialog {
+    /*
 	private OnOkClickListener mListener;
 	private AlertDialog mDialog;
 	
@@ -55,4 +56,5 @@ public class InputTextDialog {
 	public interface OnOkClickListener {
 		public abstract void onPrintClick(String text);
 	}
+    */
 }
