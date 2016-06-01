@@ -76,6 +76,7 @@ public class P25Print extends CordovaPlugin  {
 	private P25Connector mConnector;
 	
 	private ArrayList<BluetoothDevice> mDeviceList = new ArrayList<BluetoothDevice>();
+    
 	
 	
 
@@ -194,7 +195,7 @@ public class P25Print extends CordovaPlugin  {
 	private void connect(CordovaArgs args) {
 		
         String macAddress = args.getString(0);
-		BluetoothDevice device = bluetoothAdapter.getRemoteDevice(macAddress);;
+		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(macAddress);;
 		
 		if (device.getBondState() == BluetoothDevice.BOND_NONE) {
 			try {
@@ -244,10 +245,10 @@ public class P25Print extends CordovaPlugin  {
 		}
 	}
 	
-	private void printDemoContent(){
+	//private void printDemoContent(){
 		   
 		/*********** print head*******/
-		String receiptHead = "************************" 
+	/* 	String receiptHead = "************************" 
 				+ "   P25/M Test Print"+"\n"
 				+ "************************"
 				+ "\n";
@@ -277,8 +278,8 @@ public class P25Print extends CordovaPlugin  {
 		byte[] header = Printer.printfont(receiptHead + "\n", FontDefine.FONT_32PX,FontDefine.Align_CENTER,(byte)0x1A,PocketPos.LANGUAGE_ENGLISH);
 		
 			
-		/*********** print English text*******/
-		StringBuffer sb = new StringBuffer();
+		*/ /*********** print English text*******/
+		/* StringBuffer sb = new StringBuffer();
 		for(int i=1; i<128; i++)
 			sb.append((char)i);
 		String content = sb.toString().trim();
@@ -289,8 +290,8 @@ public class P25Print extends CordovaPlugin  {
 		
 		
 		
-		/*********** print Tail*******/
-		String receiptTail =  "Test Completed" + "\n"
+		*/ /*********** print Tail*******/
+		/* String receiptTail =  "Test Completed" + "\n"
 				+ "************************" + "\n";
 		
 		String receiptWeb =  "\n\n\n";
@@ -298,9 +299,7 @@ public class P25Print extends CordovaPlugin  {
 		byte[] foot = Printer.printfont(receiptTail,FontDefine.FONT_32PX,FontDefine.Align_CENTER,(byte)0x1A,PocketPos.LANGUAGE_ENGLISH);
 		byte[] web	= Printer.printfont(receiptWeb,FontDefine.FONT_32PX,FontDefine.Align_CENTER,(byte)0x1A,PocketPos.LANGUAGE_ENGLISH);
 		
-		byte[] totladata =  new byte[header.length + englishchartext24.length + englishchartext32.length + englishchartext24underline.length + 
-		                              + barcode.length
-		                             + foot.length + web.length
+		byte[] totladata =  new byte[header.length + englishchartext24.length + englishchartext32.length + englishchartext24underline.length + foot.length + web.length
 		                             ];
 	 	int offset = 0;
 		System.arraycopy(header, 0, totladata, offset, header.length);
@@ -315,8 +314,7 @@ public class P25Print extends CordovaPlugin  {
 		System.arraycopy(englishchartext24underline, 0, totladata, offset, englishchartext24underline.length);
 		offset+=englishchartext24underline.length;
 		
-		System.arraycopy(barcode, 0, totladata, offset, barcode.length);
-		offset+=barcode.length;
+		
 
 		System.arraycopy(foot, 0, totladata, offset, foot.length);
 		offset+=foot.length;
@@ -327,7 +325,7 @@ public class P25Print extends CordovaPlugin  {
 		byte[] senddata = PocketPos.FramePack(PocketPos.FRAME_TOF_PRINT, totladata, 0, totladata.length);
 
 		sendData(senddata);		
-	}
+	} */
 	
 	private void printText(String text) {
 		byte[] line 	= Printer.printfont(text + "\n\n", FontDefine.FONT_32PX, FontDefine.Align_CENTER, (byte) 0x1A, 
