@@ -53,11 +53,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Demo Blue Bamboo P25 Thermal Printer.
+ * p25 Printer plugin.
  * 
- * @author Lorensius W. L. T <lorenz@londatiga.net>
+ * @author Akshay Dwivedi <akshaydwivedi@live.com>
  *
  */
+
 public class P25Print extends CordovaPlugin  {
 	//private Button mConnectBtn;
 	//private Button mEnableBtn;
