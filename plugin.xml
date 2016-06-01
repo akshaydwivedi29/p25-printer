@@ -36,7 +36,7 @@
                 </feature>
             </config-file>
 
-            <source-file src="src/android/net/londatiga/android/bluebamboo/MainActivity.java" target-dir="src/net/londatiga/android/bluebamboo/MainActivity.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/P25Print.java" target-dir="src/net/londatiga/android/bluebamboo/P25Print.java" />
           <!--  <source-file src="src/android/net/londatiga/android/bluebamboo/InputTextDialog.java" target-dir="src/net/londatiga/android/bluebamboo/InputTextDialog.java" /> -->
             <source-file src="src/android/net/londatiga/android/bluebamboo/P25ConnectionException.java" target-dir="src/net/londatiga/android/bluebamboo/P25ConnectionException.java" />
             <source-file src="src/android/net/londatiga/android/bluebamboo/P25Connector.java" target-dir="src/net/londatiga/android/bluebamboo/P25Connector.java" />
