@@ -77,7 +77,7 @@ public class P25Print extends CordovaPlugin  {
 	
 	private ArrayList<BluetoothDevice> mDeviceList = new ArrayList<BluetoothDevice>();
     
-	
+	public Context appContext=this.cordova.getActivity().getApplicationContext();
 	
 
 	//@Override
@@ -138,7 +138,7 @@ public class P25Print extends CordovaPlugin  {
 	}
 	
 	private void showToast(String message) {
-		Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+		Toast.makeText(appContext, message, Toast.LENGTH_SHORT).show();
 	}
 	
 	//private void updateDeviceList() {
@@ -192,7 +192,7 @@ public class P25Print extends CordovaPlugin  {
 
 	}
 	
-	private void connect(CordovaArgs args) {
+	public void connect(CordovaArgs args) {
 		
         String macAddress = args.getString(0);
 		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(macAddress);;
@@ -351,11 +351,11 @@ public class P25Print extends CordovaPlugin  {
 	        } else if (BluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(action)) {
 	        	//mDeviceList = new ArrayList<BluetoothDevice>();
 				
-				mProgressDlg.show();
+				//mProgressDlg.show();
 	        } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
 	        	//mProgressDlg.dismiss();
 	        	
-	        	updateDeviceList();
+	        	//updateDeviceList();
 	        } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
 	        	BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 		        
@@ -367,8 +367,10 @@ public class P25Print extends CordovaPlugin  {
 	        	 
 	        	 if (state == BluetoothDevice.BOND_BONDED) {
 	        		 showToast("Paired");
+                     BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                     
 	        		 
-	        		 connect();
+	        		 connect(device.getAddress());
 	        	 }
 	        }
 	    }
