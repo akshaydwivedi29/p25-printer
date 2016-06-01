@@ -78,7 +78,7 @@ public class P25Print extends CordovaPlugin  {
 	
 	private ArrayList<BluetoothDevice> mDeviceList = new ArrayList<BluetoothDevice>();
     
-	public Context appContext=this.cordova.getActivity().getApplicationContext();
+	public Context appContext= cordova.getActivity().getApplicationContext();
 	
 
 	//@Override
