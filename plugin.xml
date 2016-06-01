@@ -36,30 +36,30 @@
                 </feature>
             </config-file>
 
-            <source-file src="src/android/net/londatiga/android/bluebamboo/P25Print.java" target-dir="src/net/londatiga/android/bluebamboo/P25Print.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/P25Print.java" target-dir="src/net/londatiga/android/bluebamboo/" />
           <!--  <source-file src="src/android/net/londatiga/android/bluebamboo/InputTextDialog.java" target-dir="src/net/londatiga/android/bluebamboo/InputTextDialog.java" /> -->
-            <source-file src="src/android/net/londatiga/android/bluebamboo/P25ConnectionException.java" target-dir="src/net/londatiga/android/bluebamboo/P25ConnectionException.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/P25Connector.java" target-dir="src/net/londatiga/android/bluebamboo/P25Connector.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/P25ConnectionException.java" target-dir="src/net/londatiga/android/bluebamboo/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/P25Connector.java" target-dir="src/net/londatiga/android/bluebamboo/" />
             
-            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/Function.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/Function.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/PocketPos.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PocketPos.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/PostDefine.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PostDefine.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/PostMessage.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/PostMessage.java" />
-             <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/SmartPost.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/SmartPost.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/Function.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/PocketPos.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/PostDefine.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/PostMessage.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/" />
+             <source-file src="src/android/net/londatiga/android/bluebamboo/pockdata/SmartPost.java" target-dir="src/net/londatiga/android/bluebamboo/pockdata/" />
             
 
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/AppParameters.java" target-dir="src/net/londatiga/android/bluebamboo/util/AppParameters.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/ByteConvert.java" target-dir="src/net/londatiga/android/bluebamboo/util/ByteConvert.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/DataConstants.java" target-dir="src/net/londatiga/android/bluebamboo/util/DataConstants.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/DataModel.java" target-dir="src/net/londatiga/android/bluebamboo/util/DataModel.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/DateUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/DateUtil.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/FileOperation.java" target-dir="src/net/londatiga/android/bluebamboo/util/FileOperation.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/FontDefine.java" target-dir="src/net/londatiga/android/bluebamboo/util/FontDefine.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/NumberUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/NumberUtil.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/Printer.java" target-dir="src/net/londatiga/android/bluebamboo/util/Printer.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/StringUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/StringUtil.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/Tracer.java" target-dir="src/net/londatiga/android/bluebamboo/util/Tracer.java" />
-            <source-file src="src/android/net/londatiga/android/bluebamboo/util/Util.java" target-dir="src/net/londatiga/android/bluebamboo/util/Util.java" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/AppParameters.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/ByteConvert.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/DataConstants.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/DataModel.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/DateUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/FileOperation.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/FontDefine.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/NumberUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/Printer.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/StringUtil.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/Tracer.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
+            <source-file src="src/android/net/londatiga/android/bluebamboo/util/Util.java" target-dir="src/net/londatiga/android/bluebamboo/util/" />
             
             <js-module src="p25printer.js" name="p25printer">
                 <runs />
