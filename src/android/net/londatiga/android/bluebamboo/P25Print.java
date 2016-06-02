@@ -78,8 +78,63 @@ public class P25Print extends CordovaPlugin  {
 	
 	private ArrayList<BluetoothDevice> mDeviceList = new ArrayList<BluetoothDevice>();
     
-	public Context appContext= cordova.getActivity().getApplicationContext();
+	//public Context appContext= cordova.getActivity().getApplicationContext();
 	
+    
+    @Override
+    public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
+        
+        if(mBluetoothAdapter == null)
+        {
+            mBluetoothAdapter= BluetoothAdapter.getDefaultAdapter();
+            mConnector 		= new P25Connector(new P25Connector.P25ConnectionListener() {
+
+                @Override
+                public void onStartConnecting() {
+
+                }
+
+                @Override
+                public void onConnectionSuccess() {
+
+                }
+
+                @Override
+                public void onConnectionFailed(String error) {
+
+                }
+
+                @Override
+                public void onConnectionCancelled() {
+
+                }
+
+                @Override
+                public void onDisconnected() {
+
+                }
+            });
+        }
+        
+        if(action.equals("connect"))
+        {
+            
+            callbackContext.success(connect(args.getString(0)));
+        }
+        else if(action.equals("print"))
+        {
+           
+            printText(args.getString(0));
+            callbackContext.success("Printing....");
+        }
+        else
+        { callbackContext.error("Failed " + action);
+            
+        }
+        return true;
+    }
+    
+    
 
 	//@Override
 	//public boolean onCreateOptionsMenu(Menu menu) {
@@ -139,7 +194,7 @@ public class P25Print extends CordovaPlugin  {
 	}
 	
 	private void showToast(String message) {
-		Toast.makeText(appContext, message, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(appContext, message, Toast.LENGTH_SHORT).show();
 	}
 	
 	//private void updateDeviceList() {
@@ -193,7 +248,7 @@ public class P25Print extends CordovaPlugin  {
 
 	}
 	
-	public void connect(String macAddr) {
+	public String connect(String macAddr) {
 		
         String macAddress = macAddr;
 		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(macAddress);;
@@ -201,16 +256,18 @@ public class P25Print extends CordovaPlugin  {
 		if (device.getBondState() == BluetoothDevice.BOND_NONE) {
 			try {
 				createBond(device);
+                return "Device Bonded";
 			} catch (Exception e) {
-				showToast("Failed to pair device");
+				return "Failed to pair device";
 				
-				return;
+				//return;
 			}
 		}
 		
 		try {
 			if (!mConnector.isConnected()) {
 				mConnector.connect(device);
+                return "Device Connected";
 			} else {
 				mConnector.disconnect();
 				
@@ -219,6 +276,8 @@ public class P25Print extends CordovaPlugin  {
 		} catch (P25ConnectionException e) {
 			e.printStackTrace();
 		}
+        
+        return "Connect at End";
 	}
 	
 	private void createBond(BluetoothDevice device) throws Exception { 
@@ -333,7 +392,8 @@ public class P25Print extends CordovaPlugin  {
 							PocketPos.LANGUAGE_ENGLISH);
 		byte[] senddata = PocketPos.FramePack(PocketPos.FRAME_TOF_PRINT, line, 0, line.length);
 
-		sendData(senddata);		
+		sendData(senddata);	
+        
 	}
 
 	
