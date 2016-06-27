@@ -78,7 +78,12 @@ public class P25Print extends CordovaPlugin  {
 	
 	private ArrayList<BluetoothDevice> mDeviceList = new ArrayList<BluetoothDevice>();
     
+    private String printString = "Printer Connected";
+    
+    private Boolean shouldPrint = false;
+    
 	//public Context appContext= cordova.getActivity().getApplicationContext();
+    // should print should be set to true for the print to print receipts
 	
     
     @Override
@@ -96,6 +101,13 @@ public class P25Print extends CordovaPlugin  {
 
                 @Override
                 public void onConnectionSuccess() {
+                    
+                    if(shouldPrint)
+                    {
+                        printText(printString);
+                        shouldPrint =false;
+                    }
+                    
 
                 }
 
@@ -114,18 +126,33 @@ public class P25Print extends CordovaPlugin  {
 
                 }
             });
+            
+            IntentFilter filter = new IntentFilter();
+		
+		filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+		filter.addAction(BluetoothDevice.ACTION_FOUND);
+		filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
+		filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+		filter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+		
+		cordova.getActivity().registerReceiver(mReceiver, filter); // not sure anbout the revuebet
         }
         
         if(action.equals("connect"))
         {
+            shouldPrint = true;
             
             callbackContext.success(connect(args.getString(0)));
         }
         else if(action.equals("print"))
         {
            
-            printText(args.getString(0));
+            printString = args.getString(1);
+            
+            shouldPrint = true;
+            connect(args.getString(0));
             callbackContext.success("Printing....");
+            
         }
         else
         { callbackContext.error("Failed " + action);
@@ -251,7 +278,7 @@ public class P25Print extends CordovaPlugin  {
 	public String connect(String macAddr) {
 		
         String macAddress = macAddr;
-		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(macAddress);;
+		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(macAddress);
 		
 		if (device.getBondState() == BluetoothDevice.BOND_NONE) {
 			try {
@@ -269,9 +296,9 @@ public class P25Print extends CordovaPlugin  {
 				mConnector.connect(device);
                 return "Device Connected";
 			} else {
-				mConnector.disconnect();
-				
-				showDisonnected();
+				//mConnector.disconnect();
+				printText(printString);
+				//showDisonnected();
 			}
 		} catch (P25ConnectionException e) {
 			e.printStackTrace();
@@ -388,7 +415,7 @@ public class P25Print extends CordovaPlugin  {
 	} */
 	
 	private void printText(String text) {
-		byte[] line 	= Printer.printfont(text + "\n\n", FontDefine.FONT_32PX, FontDefine.Align_CENTER, (byte) 0x1A, 
+		byte[] line 	= Printer.printfont(text, FontDefine.FONT_32PX, FontDefine.Align_CENTER, (byte) 0x1A, 
 							PocketPos.LANGUAGE_ENGLISH);
 		byte[] senddata = PocketPos.FramePack(PocketPos.FRAME_TOF_PRINT, line, 0, line.length);
 

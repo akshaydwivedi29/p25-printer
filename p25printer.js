@@ -4,7 +4,7 @@ module.exports = {
         cordova.exec(success, failure, "P25Print", "connect", [macAddress]);
     },
     
-    print: function (printText, success, failure) {
-        cordova.exec(success, failure, "P25Print", "print", [printText]);
+    print: function (macAddress,printText, success, failure) {
+        cordova.exec(success, failure, "P25Print", "print", [macAddress,printText]);
     }
 }
